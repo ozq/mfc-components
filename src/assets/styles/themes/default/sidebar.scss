@@ -1,0 +1,75 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(sidebar-wrp) {
+  z-index: $--m-sidebar-z-index;
+  background-color: $--m-sidebar-color-background;
+  color: $--m-sidebar-color-text;
+  &_expanded {
+    max-height: 100%;
+  }
+  &_shrank {
+    max-height: 100%;
+  }
+};
+
+@include component(sidebar-shrank) {
+  border-right: solid 1px $--m-sidebar-color-border;
+  box-sizing: content-box;
+  width: $--m-sidebar-width-shrank;
+  &_toggler {
+    height: $--m-header-height !important;
+  }
+  &_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: $--m-sidebar-width-shrank;
+    border-bottom: solid 1px $--m-sidebar-color-border;
+    padding: $--m-sidebar-shrank-header-padding-y 0;
+  }
+}
+
+@include component(sidebar-expanded) {
+  display: flex;
+  flex-direction: column;
+  border-right: solid 1px $--m-sidebar-color-border;
+  width: $--m-sidebar-width-expanded;
+  max-height: 100%;
+  &_icon {
+    transform: rotate(180deg);
+  }
+  &_header {
+    display: flex;
+    align-items: center;
+    padding-left: $--m-sidebar-header-padding-x;
+    border-bottom: solid 1px $--m-sidebar-color-border;
+    height: $--m-header-height;
+    box-sizing: content-box;
+  }
+  &_body {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: $--m-sidebar-body-padding-y $--m-sidebar-body-padding-x;
+    &::-webkit-scrollbar {
+      height: $--m-sidebar-scroll-width;
+      width: $--m-sidebar-scroll-width;
+    }
+    &::-webkit-scrollbar-track {
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      background: $--m-color-contrast-2;
+      opacity: 0.5;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+  }
+  &_toggler {
+    margin-left: auto;
+    height: $--m-header-height !important;
+  }
+}

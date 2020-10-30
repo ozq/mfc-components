@@ -1,0 +1,42 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(menu-item) {
+  $root: &;
+  display: flex;
+  align-items: center;
+  height: $--m-menu-item-height;
+  padding: $--m-menu-item-padding-y $--m-menu-item-padding-x;
+  border-radius: $--m-size-border-radius;
+  margin-bottom: $--m-menu-item-gap;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  background-color: $--m-menu-item-color-background;
+  &:hover, &.-active {
+    background-color: $--m-menu-item-color-background-hover;
+    #{$root}_body {
+      color: $--m-menu-item-color-hover;
+    }
+    #{$root}_icon {
+      svg {
+        fill: $--m-menu-item-color-hover;
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &_body {
+    font-size: $--m-menu-item-font-size;
+    color: $--m-menu-item-color;
+    line-height: 1;
+    user-select: none;
+  }
+  &_icon {
+    display: inline-flex;
+    margin-right: $--m-menu-item-icon-gap;
+    svg {
+      fill: $--m-menu-item-color-icon;
+    }
+  }
+};

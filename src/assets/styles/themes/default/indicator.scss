@@ -1,0 +1,12 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(indicator) {
+  display: inline-block;
+  border-radius: 100%;
+  &.-xs { @include square(4px); }
+  &, &.-sm { @include square(8px); }
+  &.-md { @include square(16px); }
+  &.-lg { @include square(32px); }
+  @include indicator('background-color');
+};

@@ -1,0 +1,8 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(icon) {
+  fill: $--m-color-icon;
+  width: $--m-size-icon;
+  height: $--m-size-icon;
+};

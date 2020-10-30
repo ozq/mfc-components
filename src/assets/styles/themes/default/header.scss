@@ -1,0 +1,13 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(header) {
+  display: flex;
+  align-items: center;
+  height: $--m-header-height;
+  min-height: $--m-header-height;
+  border-bottom: solid 1px $--m-header-color-border;
+  background-color: $--m-header-color-background;
+  padding: 0 $--m-header-padding-x;
+  box-sizing: content-box;
+};

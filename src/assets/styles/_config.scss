@@ -1,0 +1,94 @@
+/**
+ * VARIABLE NAMING PATTERNS:
+ *
+ *    Common:
+ *    ${prefix}-{?attribute_group}-{?attribute}-{?state}-{?modifier}
+ *       example: ${--m}-{size}-{border-radius}-{focus}-{sm}
+ *       example: ${--m}-{size}_{}-{}-{icon}
+ *       example: ${--m}-{color}-{}-{}-{gray-1}
+ *       example: ${--m}-{color}-{}-{}-{icon}
+ *
+ *    Component:
+ *    ${prefix}-{component}-{?element}-{?attribute_group}-{?attribute}-{?state}-{?modifier}
+ *       example: ${--m}-{sidebar}-{shrank-header}-{}-{padding-y}
+ *       example: ${--m}-{menu-item}-{}-{gap}-{}-{}
+ *
+ */
+
+// System
+$namespace: 'm';
+
+// Colors
+$--m-color-accent-1: #66A6FF !default;
+$--m-color-contrast-1: #96AAC2 !default;
+$--m-color-contrast-2: #617397 !default;
+$--m-color-contrast-3: #465A74 !default;
+$--m-color-contrast-4: #405369 !default;
+$--m-color-contrast-5: #3B4756 !default;
+$--m-color-gray-1: #DBE2EB !default;
+$--m-color-icon: #A4ABBD !default;
+$--m-color-text: #000 !default;
+$--m-color-info: $--m-color-gray-1 !default;
+$--m-color-warning: #CFD51C !default;
+$--m-color-error: #e74c3c !default;
+$--m-color-success: #2FC193 !default;
+
+// Sizes
+$--m-size-border-radius: 4px !default;
+$--m-size-icon: 16px !default;
+
+// Header
+$--m-header-height: 64px !default;
+$--m-header-padding-x: 64px !default;
+$--m-header-color-background: #FFF !default;
+$--m-header-color-border: $--m-color-gray-1 !default;
+
+// Sidebar
+$--m-sidebar-padding-x: 32px !default;
+$--m-sidebar-body-padding-x: $--m-sidebar-padding-x !default;
+$--m-sidebar-body-padding-y: 48px !default;
+$--m-sidebar-header-padding-x: $--m-sidebar-padding-x !default;
+$--m-sidebar-color-text: #FFF !default;
+$--m-sidebar-color-background: $--m-color-contrast-3 !default;
+$--m-sidebar-color-background-hover: $--m-color-contrast-4 !default;
+$--m-sidebar-color-border: $--m-color-contrast-2 !default;
+$--m-sidebar-width-shrank: $--m-header-height !default;
+$--m-sidebar-width-expanded: 290px !default;
+$--m-sidebar-z-index: 999 !default;
+$--m-sidebar-scroll-width: 2px !default;
+$--m-sidebar-shrank-header-padding-y: 24px !default;
+
+// Sidebar Button
+$--m-sidebar-button-color-icon: $--m-color-icon !default;
+$--m-sidebar-button-color-icon-hover: #FFF !default;
+
+// Menu Item
+$--m-menu-item-height: 40px !default;
+$--m-menu-item-gap: 16px !default;
+$--m-menu-item-padding-x: 12px !default;
+$--m-menu-item-padding-y: 8px !default;
+$--m-menu-item-icon-gap: 24px !default;
+$--m-menu-item-color: #9C9C9C !default;
+$--m-menu-item-color-hover: #FFF !default;
+$--m-menu-item-color-background: transparent !default;
+$--m-menu-item-color-background-hover: #666 !default;
+$--m-menu-item-font-size: 14px !default;
+$--m-menu-item-color-icon: $--m-menu-item-color !default;
+$--m-menu-item-color-icon-hover: $--m-menu-item-color-hover !default;
+
+// Userpic
+$--m-userpic-size: 40px !default;
+$--m-userpic-color-background: $--m-color-accent-1 !default;
+$--m-userpic-color-text: #FFF !default;
+$--m-userpic-border-radius: 100% !default;
+$--m-userpic-font-size: 14px !default;
+$--m-userpic-icon-gap: 8px !default;
+$--m-userpic-icon-size: 12px !default;
+$--m-userpic-icon-color: $--m-color-icon !default;
+
+// Popover
+$--m-popover-padding-x: 16px !default;
+$--m-popover-padding-y: 32px !default;
+$--m-popover-border-radius: $--m-size-border-radius !default;
+$--m-popover-color-background: #FFF !default;
+$--m-popover-z-index: 10000 !default;

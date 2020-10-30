@@ -1,24 +1,6 @@
-# mfc-components
+# @mfc/components
 
-## Project setup
-```
-yarn install
-```
+Library of common UI components created by MediaNation.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Testing components
+`vue serve src/playground/Sidebar.vue`

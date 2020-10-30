@@ -1,14 +1,22 @@
 {
-  "name": "mfc-components",
+  "name": "@mfc/components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "./dist/mui.common.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name mui ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "v-tooltip": "^2.0.3",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -18,6 +26,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

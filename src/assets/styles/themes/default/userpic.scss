@@ -1,0 +1,40 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(userpic-wrp) {
+
+};
+
+@include component(userpic) {
+  display: flex;
+  align-items: center;
+  &_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $--m-userpic-size;
+    height: $--m-userpic-size;
+    border-radius: $--m-userpic-border-radius;
+    background-color: $--m-userpic-color-background;
+    background-position: center;
+    color: $--m-userpic-color-text;
+    font-size: $--m-userpic-font-size;
+    font-weight: 500;
+    user-select: none;
+    background-size: cover;
+  }
+  &_popover {
+    margin-left: $--m-userpic-icon-gap;
+  }
+  &_caret {
+    cursor: pointer;
+    fill: darken($--m-userpic-icon-color, 50%);
+    opacity: 0.6;
+    width: $--m-userpic-icon-size;
+    height: $--m-userpic-icon-size;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+};

@@ -1,0 +1,11 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(menu) {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  &.-sp {
+    margin: 0 -$--m-menu-item-padding-x;
+  }
+};

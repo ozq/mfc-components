@@ -1,0 +1,32 @@
+@import './config';
+
+$sizes: "xs", "sm", "md", "lg";
+
+$indicators: "info", "warning", "error", "success";
+$indicatorColors: (
+  "info": $--m-color-info,
+  "warning": $--m-color-warning,
+  "error": $--m-color-error,
+  "success": $--m-color-success,
+);
+
+@mixin component($name) {
+  $className: $namespace+'-'+$name !global;
+  .#{$className} {
+    @content;
+  }
+}
+
+@mixin indicator($attribute) {
+  @each $indicator in $indicators {
+    &.-#{$indicator} {
+      #{$attribute}: map-get($indicatorColors, $indicator);
+    }
+  }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+  flex-shrink: 0;
+}

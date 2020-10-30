@@ -1,0 +1,95 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(popover) {
+  display: flex;
+  align-items: center;
+}
+
+@include component(popover-theme) {
+  outline: none;
+  display: block !important;
+  z-index: $--m-popover-z-index;
+  &.popover {
+    .popover-inner {
+      background: $--m-popover-color-background;
+      color: $--m-color-text;
+      padding: $--m-popover-padding-x $--m-popover-padding-y;
+      border-radius: $--m-popover-border-radius;
+      box-shadow: 0 0 30px rgba(#000, 0.15);
+    }
+    .popover-arrow {
+      width: 0;
+      height: 0;
+      position: absolute;
+      margin: 5px;
+      z-index: 1;
+      border-style: solid;
+      border-color: $--m-popover-color-background;
+    }
+  }
+
+  &[x-placement^="top"] {
+    margin-bottom: 5px;
+    .tooltip-arrow {
+      border-width: 5px 5px 0 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  &[x-placement^="bottom"] {
+    margin-top: 5px;
+    .tooltip-arrow {
+      border-width: 0 5px 5px 5px;
+      border-left-color: transparent !important;
+      border-right-color: transparent !important;
+      border-top-color: transparent !important;
+      top: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  &[x-placement^="right"] {
+    margin-left: 5px;
+    .tooltip-arrow {
+      border-width: 5px 5px 5px 0;
+      border-left-color: transparent !important;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      left: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &[x-placement^="left"] {
+    margin-right: 5px;
+    .tooltip-arrow {
+      border-width: 5px 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      right: -5px;
+      top: calc(50% - 5px);
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &[aria-hidden='true'] {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .15s, visibility .15s;
+  }
+  &[aria-hidden='false'] {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .15s;
+  }
+};

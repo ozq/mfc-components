@@ -1,0 +1,25 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(sidebar-button) {
+  display: flex;
+  height: $--m-sidebar-width-shrank;
+  width: $--m-sidebar-width-shrank;
+  border-color: $--m-sidebar-color-border;
+  border-style: solid;
+  border-width: 0;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+  svg {
+    fill: $--m-sidebar-button-color-icon;
+  }
+  &:hover, &.-active {
+    background-color: $--m-sidebar-color-background-hover;
+    svg {
+      fill: $--m-sidebar-button-color-icon-hover;
+    }
+  }
+}
