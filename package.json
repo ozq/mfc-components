@@ -1,6 +1,6 @@
 {
   "name": "@mfc/components",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "main": "./dist/mui.common.js",
   "files": [
@@ -12,7 +12,15 @@
     "build": "vue-cli-service build --target lib --name mui ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
+  "repository": {
+    "url": "https://github.com/ozq/mfc-components",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
+    "@mfc/components": "file:.yalc/@mfc/components",
     "core-js": "^3.6.5",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",

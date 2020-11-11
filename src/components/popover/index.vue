@@ -1,5 +1,5 @@
 <template>
-    <v-popover class="m-popover" popover-class="m-popover-theme" :v-bind="$props">
+    <v-popover class="m-popover" popover-class="m-popover-theme" v-bind="props">
         <slot name="reference"></slot>
         <template slot="popover">
             <slot></slot>
@@ -11,6 +11,12 @@
     import { VPopover } from 'v-tooltip';
 
     export default {
+        props: {
+            props: {
+                type: Object,
+                default: () => {},
+            },
+        },
         components: {
             VPopover,
         },

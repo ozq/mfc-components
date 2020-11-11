@@ -8,6 +8,7 @@ import MMenuItem from './menu-item';
 import MUserpic from './userpic';
 import MPopover from './popover';
 import MIndicator from './indicator';
+import MToggler from './toggler';
 
 export {
     MIcon,
@@ -20,4 +21,5 @@ export {
     MUserpic,
     MPopover,
     MIndicator,
+    MToggler,
 };

@@ -1,0 +1,76 @@
+@import "../../config";
+@import "../../mixins";
+
+@mixin inactiveMixin() {
+  content: '';
+  position: absolute;
+  display: block;
+}
+@mixin beforeAnimation() {
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+}
+@mixin afterAnimation() {
+  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 4px 0 0 hsla(0, 0%, 0%, 0.04), 0 4px 9px hsla(0, 0%, 0%, 0.13), 0 3px 3px hsla(0, 0%, 0%, 0.05);
+  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+}
+
+@include component(toggler) {
+  $bullet-gap: 4px;
+  display: flex;
+  align-items: center;
+  &.-disabled {
+    pointer-events: none;
+    label {
+      opacity: 0.5;
+    }
+  }
+  &_label {
+    margin-left: 16px;
+    white-space: nowrap;
+  }
+  input {
+    opacity: 0; // hides checkbox
+    position: absolute;
+    & + label {
+      position: relative;
+      display: inline-block;
+      user-select: none;
+      transition: 0.4s ease;
+      height: $--m-toggler-height;
+      width: $--m-toggler-width;
+      border: 1px solid #e4e4e4;
+      border-radius: $--m-toggler-height;
+      background: $--m-toggler-background;
+      &:before {
+        @include inactiveMixin();
+        @include beforeAnimation();
+        height: $--m-toggler-height + 1px;
+        width: $--m-toggler-width;
+        top: 0;
+        left: 0;
+        border-radius: $--m-toggler-height;
+        cursor: pointer;
+      }
+      &:after {
+        @include inactiveMixin();
+        @include afterAnimation();
+        background: #fff;
+        height: $--m-toggler-height - 6px;
+        width: $--m-toggler-height - 6px;
+        top: 3px;
+        left: $bullet-gap;
+        border-radius: $--m-toggler-height;
+        cursor: pointer;
+      }
+    }
+    &:checked {
+      & + label:before {
+        background: $--m-toggler-bullet-background;
+        transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+      }
+      & + label:after {
+        left: $--m-toggler-width + $bullet-gap - $--m-toggler-height;
+      }
+    }
+  }
+};

@@ -4,6 +4,9 @@
 @include component(popover) {
   display: flex;
   align-items: center;
+  & > div {
+    line-height: 1;
+  }
 }
 
 @include component(popover-theme) {
