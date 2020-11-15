@@ -9,6 +9,7 @@ import MUserpic from './userpic';
 import MPopover from './popover';
 import MIndicator from './indicator';
 import MToggler from './toggler';
+import MDotsLoader from './dots-loader';
 
 export {
     MIcon,
@@ -22,4 +23,5 @@ export {
     MPopover,
     MIndicator,
     MToggler,
+    MDotsLoader,
 };

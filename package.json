@@ -10,7 +10,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name mui ./src/components/index.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postversion": "npm run release",
+    "release": "npm publish"
   },
   "repository": {
     "url": "https://github.com/ozq/mfc-components",

@@ -96,5 +96,11 @@ $--m-popover-z-index: 10000 !default;
 // Toggler
 $--m-toggler-height: 22px !default;
 $--m-toggler-width: 50px !default;
-$--m-toggler-background: $--m-color-icon !default;;
-$--m-toggler-bullet-background: $--m-color-accent-1 !default;;
+$--m-toggler-background: $--m-color-icon !default;
+$--m-toggler-bullet-background: $--m-color-accent-1 !default;
+
+// Dots Loader
+$--m-dots-loader-size: 8px !default;
+$--m-dots-loader-color: $--m-color-accent-1 !default;
+$--m-dots-loader-animation-duration: 1.4s !default;
+$--m-dots-loader-animation-delay:  0.3s !default;
