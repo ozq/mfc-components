@@ -37,7 +37,7 @@
             },
             wrapperStyle() {
                 return {
-                    cursor: this.$listeners.click ? 'pointer' : 'initial',
+                    cursor: this.$listeners.click ? 'pointer' : 'inherit',
                 };
             },
         },

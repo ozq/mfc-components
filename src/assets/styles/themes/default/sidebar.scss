@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    box-sizing: content-box;
     min-height: $--m-sidebar-width-shrank;
     border-bottom: solid 1px $--m-sidebar-color-border;
     padding: $--m-sidebar-shrank-header-padding-y 0;

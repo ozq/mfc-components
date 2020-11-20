@@ -7,12 +7,7 @@
 </template>
 
 <script>
-    import IdMixin from '@/components/_mixins/IdMixin';
-
     export default {
-        mixins: [
-            IdMixin,
-        ],
         props: {
             value: {
                 required: true,
@@ -28,6 +23,7 @@
         },
         data() {
             return {
+                id: null,
                 checked: Boolean(this.value),
             };
         },
@@ -40,6 +36,9 @@
                     this.checked = this.value;
                 },
             },
+        },
+        mounted() {
+            this.id = Math.random().toString(16).slice(2);
         },
     };
 </script>
