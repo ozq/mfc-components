@@ -10,6 +10,8 @@ import MPopover from './popover';
 import MIndicator from './indicator';
 import MToggler from './toggler';
 import MDotsLoader from './dots-loader';
+import MPopoverList from './popover-list';
+import MPopoverListItem from './popover-list-item';
 
 export {
     MIcon,
@@ -24,4 +26,6 @@ export {
     MIndicator,
     MToggler,
     MDotsLoader,
+    MPopoverList,
+    MPopoverListItem,
 };

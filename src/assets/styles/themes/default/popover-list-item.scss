@@ -1,0 +1,42 @@
+@import '../../config';
+@import '../../mixins';
+
+@include component(popover-list-item) {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px $--m-color-gray-1;
+  outline: none;
+  width: 100%;
+  line-height: 1;
+  &:last-child {
+    border-bottom: none;
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    line-height: inherit;
+    &.-active {
+      color: $--m-color-accent-1;
+    }
+  }
+  &_body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    & > * {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      width: 100%;
+      padding: $--m-popover-list-item-padding-y $--m-popover-list-item-padding-x;
+      & > img, svg {
+        margin-right: $--m-popover-list-item-icon-gap;
+      }
+    }
+    &:hover {
+      a {
+        color: $--m-color-accent-1;
+      }
+    }
+  }
+}
