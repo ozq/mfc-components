@@ -1,9 +1,7 @@
 @import "../../config";
 @import "../../mixins";
 
-@include component(userpic-wrp) {
-
-};
+@include component(userpic-wrp) {};
 
 @include component(userpic) {
   display: flex;
@@ -28,7 +26,7 @@
   }
   &_caret {
     cursor: pointer;
-    fill: darken($--m-userpic-icon-color, 50%);
+    fill: $--m-color-secondary-light;
     opacity: 0.6;
     width: $--m-userpic-icon-size;
     height: $--m-userpic-icon-size;

@@ -2,12 +2,12 @@
 
 $sizes: "xs", "sm", "md", "lg";
 
-$indicators: "info", "warning", "error", "success";
+$indicators: "info", "success", "warning", "error";
 $indicatorColors: (
   "info": $--m-color-info,
-  "warning": $--m-color-warning,
-  "error": $--m-color-error,
   "success": $--m-color-success,
+  "warning": $--m-color-warning,
+  "danger": $--m-color-danger,
 );
 
 @mixin component($name) {

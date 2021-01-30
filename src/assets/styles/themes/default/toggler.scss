@@ -54,7 +54,7 @@
       &:after {
         @include inactiveMixin();
         @include afterAnimation();
-        background: #fff;
+        background: $--m-color-background-primary;
         height: $--m-toggler-height - 6px;
         width: $--m-toggler-height - 6px;
         top: 3px;

@@ -19,19 +19,48 @@
 $namespace: 'm';
 
 // Colors
-$--m-color-accent-1: #66A6FF !default;
-$--m-color-contrast-1: #96AAC2 !default;
-$--m-color-contrast-2: #617397 !default;
-$--m-color-contrast-3: #465A74 !default;
-$--m-color-contrast-4: #405369 !default;
-$--m-color-contrast-5: #3B4756 !default;
-$--m-color-gray-1: #DBE2EB !default;
-$--m-color-icon: #A4ABBD !default;
-$--m-color-text: #000 !default;
-$--m-color-info: $--m-color-gray-1 !default;
-$--m-color-warning: #CFD51C !default;
-$--m-color-error: #e74c3c !default;
-$--m-color-success: #2FC193 !default;
+$--m-color-primary: #4B94F9;
+$--m-color-primary-light: #5D9FFA;
+$--m-color-primary-lighter: #93BFFB;
+$--m-color-primary-extra-light: #EEF4FD;
+// ----------
+$--m-color-secondary: #A4ABBD !default;
+$--m-color-secondary-light: #AEB4C4 !default;
+$--m-color-secondary-lighter: #DBDDE5 !default;
+$--m-color-secondary-extra-light: #EDEEF2 !default;
+// ----------
+$--m-color-text-primary: #000 !default;
+$--m-color-text-secondary: #A4ABBD !default;
+$--m-color-text-light: #FFF !default;
+// ----------
+$--m-color-background-primary: #FFF;
+// ----------
+$--m-color-background-secondary: #465A74 !default;
+$--m-color-background-secondary-light: #6B7B90 !default;
+$--m-color-background-secondary-lighter: #909CAC !default;
+$--m-color-background-secondary-extra-light: #DADEE3 !default;
+// ----------
+$--m-color-info: $color-secondary !default;
+$--m-color-info-light: $color-secondary-light !default;
+$--m-color-info-lighter: $color-secondary-lighter !default;
+$--m-color-info-extra-light: $color-secondary-extra-light !default;
+// ----------
+$--m-color-success: #67C23A !default;
+$--m-color-success-light: #77C94E !default;
+$--m-color-success-lighter: #A4DA89 !default;
+$--m-color-success-extra-light: #E1F3D8 !default;
+// ----------
+$--m-color-warning: #E6A23C !default;
+$--m-color-warning-light: #E9AC50 !default;
+$--m-color-warning-lighter: #F0C78A !default;
+$--m-color-warning-extra-light: #FAECD8 !default;
+// ----------
+$--m-color-danger: #F14A4A !default;
+$--m-color-danger-light: #F35D5D !default;
+$--m-color-danger-lighter: #F79292 !default;
+$--m-color-danger-extra-light: #FCDBDB !default;
+// ----------
+$--m-color-icon: $--m-color-secondary !default;
 
 // Sizes
 $--m-size-border-radius: 4px !default;
@@ -40,18 +69,18 @@ $--m-size-icon: 16px !default;
 // Header
 $--m-header-height: 64px !default;
 $--m-header-padding-x: 64px !default;
-$--m-header-color-background: #FFF !default;
-$--m-header-color-border: $--m-color-gray-1 !default;
+$--m-header-color-background: $--m-color-background-primary !default;
+$--m-header-color-border: $--m-color-secondary-lighter !default;
 
 // Sidebar
 $--m-sidebar-padding-x: 32px !default;
 $--m-sidebar-body-padding-x: $--m-sidebar-padding-x !default;
 $--m-sidebar-body-padding-y: 48px !default;
 $--m-sidebar-header-padding-x: $--m-sidebar-padding-x !default;
-$--m-sidebar-color-text: #FFF !default;
-$--m-sidebar-color-background: $--m-color-contrast-3 !default;
-$--m-sidebar-color-background-hover: $--m-color-contrast-4 !default;
-$--m-sidebar-color-border: $--m-color-contrast-2 !default;
+$--m-sidebar-color-text: $--m-color-text-light !default;
+$--m-sidebar-color-background: $--m-color-background-secondary !default;
+$--m-sidebar-color-background-hover: $--m-color-background-secondary-light !default;
+$--m-sidebar-color-border: $--m-color-secondary !default;
 $--m-sidebar-width-shrank: $--m-header-height !default;
 $--m-sidebar-width-expanded: 290px !default;
 $--m-sidebar-z-index: 999 !default;
@@ -60,7 +89,7 @@ $--m-sidebar-shrank-header-padding-y: 24px !default;
 
 // Sidebar Button
 $--m-sidebar-button-color-icon: $--m-color-icon !default;
-$--m-sidebar-button-color-icon-hover: #FFF !default;
+$--m-sidebar-button-color-icon-hover: $--m-color-text-light !default;
 
 // Menu Item
 $--m-menu-item-height: 40px !default;
@@ -69,7 +98,7 @@ $--m-menu-item-padding-x: 12px !default;
 $--m-menu-item-padding-y: 8px !default;
 $--m-menu-item-icon-gap: 24px !default;
 $--m-menu-item-color: #9C9C9C !default;
-$--m-menu-item-color-hover: #FFF !default;
+$--m-menu-item-color-hover: $--m-color-text-light !default;
 $--m-menu-item-color-background: transparent !default;
 $--m-menu-item-color-background-hover: #666 !default;
 $--m-menu-item-font-size: 14px !default;
@@ -78,30 +107,29 @@ $--m-menu-item-color-icon-hover: $--m-menu-item-color-hover !default;
 
 // Userpic
 $--m-userpic-size: 40px !default;
-$--m-userpic-color-background: $--m-color-accent-1 !default;
-$--m-userpic-color-text: #FFF !default;
+$--m-userpic-color-background: $--m-color-primary !default;
+$--m-userpic-color-text: $--m-color-text-light !default;
 $--m-userpic-border-radius: 100% !default;
 $--m-userpic-font-size: 14px !default;
 $--m-userpic-icon-gap: 8px !default;
 $--m-userpic-icon-size: 12px !default;
-$--m-userpic-icon-color: $--m-color-icon !default;
 
 // Popover
 $--m-popover-padding-x: 16px !default;
 $--m-popover-padding-y: 32px !default;
 $--m-popover-border-radius: $--m-size-border-radius !default;
-$--m-popover-color-background: #FFF !default;
+$--m-popover-color-background: $--m-color-background-primary !default;
 $--m-popover-z-index: 10000 !default;
 
 // Toggler
 $--m-toggler-height: 22px !default;
 $--m-toggler-width: 50px !default;
-$--m-toggler-background: $--m-color-icon !default;
-$--m-toggler-bullet-background: $--m-color-accent-1 !default;
+$--m-toggler-background: $--m-color-secondary-light !default;
+$--m-toggler-bullet-background: $--m-color-primary !default;
 
 // Dots Loader
 $--m-dots-loader-size: 8px !default;
-$--m-dots-loader-color: $--m-color-accent-1 !default;
+$--m-dots-loader-color: $--m-color-primary !default;
 $--m-dots-loader-animation-duration: 1.4s !default;
 $--m-dots-loader-animation-delay:  0.3s !default;
 

@@ -4,7 +4,7 @@
 @include component(popover-list-item) {
   display: flex;
   align-items: center;
-  border-bottom: solid 1px $--m-color-gray-1;
+  border-bottom: solid 1px $--m-color-secondary-lighter;
   outline: none;
   width: 100%;
   line-height: 1;
@@ -16,7 +16,7 @@
     text-decoration: none;
     line-height: inherit;
     &.-active {
-      color: $--m-color-accent-1;
+      color: $--m-color-primary;
     }
   }
   &_body {
@@ -35,7 +35,7 @@
     }
     &:hover {
       a {
-        color: $--m-color-accent-1;
+        color: $--m-color-primary;
       }
     }
   }
