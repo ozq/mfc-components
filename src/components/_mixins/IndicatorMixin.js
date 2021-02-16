@@ -4,7 +4,7 @@ export default {
             type: String,
             default: 'info',
             validator: function (value) {
-                return ['info', 'warning', 'error', 'success'].includes(value);
+                return ['info', 'warning', 'danger', 'success'].includes(value);
             },
         },
     },

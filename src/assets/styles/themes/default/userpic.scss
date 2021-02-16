@@ -26,8 +26,8 @@
   }
   &_caret {
     cursor: pointer;
-    fill: $--m-color-secondary-light;
-    opacity: 0.6;
+    fill: $--m-color-secondary;
+    opacity: 0.65;
     width: $--m-userpic-icon-size;
     height: $--m-userpic-icon-size;
     transition: opacity 0.2s;
