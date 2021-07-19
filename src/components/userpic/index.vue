@@ -1,8 +1,10 @@
 <template>
     <div class="m-userpic" :style="wrapperStyle" @click="$emit('click')">
-        <div class="m-userpic_image" :style="picStyle">{{ (title || '')[0] }}</div>
         <m-popover v-if="$slots.popover" class="m-userpic_popover" placement="bottom">
-            <m-icon slot="reference" class="m-userpic_caret" name="dropdown-arrow"/>
+            <template slot="reference">
+                <div class="m-userpic_image" :style="picStyle">{{ (title || '')[0] }}</div>
+                <m-icon class="m-userpic_caret" name="dropdown-arrow"/>
+            </template>
             <slot name="popover"></slot>
         </m-popover>
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <li class="m-menu-item" :class="{ '-active': active }" @click="$emit('click')">
+    <li class="m-menu-item" :class="{ '-active': active }" @click="$emit('click', $event)">
         <span class="m-menu-item_icon" v-if="$slots.icon">
             <slot name="icon"></slot>
         </span>
