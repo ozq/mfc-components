@@ -2,7 +2,7 @@
 @import '../../mixins';
 
 @include component(popover-list) {
-  margin: -$--m-popover-list-item-padding-y;
+  margin: (-$--m-popover-padding-x) (-$--m-popover-padding-y);
   list-style-type: none;
   padding-left: 0;
 }

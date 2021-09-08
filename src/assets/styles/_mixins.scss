@@ -30,3 +30,24 @@ $indicatorColors: (
   height: $size;
   flex-shrink: 0;
 }
+
+@mixin alternative-scroll() {
+  $color-thumb: rgba($--m-color-secondary, 80%);
+  $color-thumb-active: $--m-color-secondary;
+  scrollbar-color: transparent $color-thumb-active;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    $size: 8px;
+    height: $size;
+    width: $size;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-thumb;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color-thumb-active;
+  }
+}

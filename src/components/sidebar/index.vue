@@ -3,6 +3,7 @@
         <sidebar-expanded v-if="expanded"
             class="m-sidebar-wrp_expanded"
             :width="expandedWidth"
+            :enable-toggle="enableToggle"
             ref="expanded"
             @toggle="shrink">
             <template slot="expanded-header">
@@ -43,10 +44,14 @@
                 type: Boolean,
                 default: false,
             },
+            enableToggle: {
+                type: Boolean,
+                default: true,
+            },
         },
         data() {
             return {
-                expanded: this.expandedDefault,
+                expanded: this.enableToggle ? this.expandedDefault : true,
             };
         },
         components: {

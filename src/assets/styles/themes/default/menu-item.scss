@@ -7,6 +7,7 @@
   align-items: center;
   height: $--m-menu-item-height;
   padding: $--m-menu-item-padding-y $--m-menu-item-padding-x;
+  box-sizing: border-box;
   border-radius: $--m-size-border-radius;
   margin-bottom: $--m-menu-item-gap;
   cursor: pointer;
@@ -37,6 +38,8 @@
     margin-right: $--m-menu-item-icon-gap;
     svg {
       fill: $--m-menu-item-color-icon;
+      width: $--m-menu-item-icon-size;
+      height: $--m-menu-item-icon-size;
     }
   }
 };

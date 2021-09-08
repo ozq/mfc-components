@@ -1,0 +1,45 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(auth-social-button) {
+  $color-facebook: #39579A;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: $--m-color-text-primary;
+  background-color: $--m-color-background-primary;
+  box-shadow: 0 3px 6px $--m-color-secondary-extra-light;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  height: 48px;
+  padding: 0 48px;
+  border: solid 1px $--m-color-secondary-extra-light;
+  margin: 0 auto 24px auto;
+  min-width: 220px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    box-shadow: 0 3px 6px $--m-color-secondary-lighter;
+    text-decoration: none;
+  }
+  &_icon {
+    width: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    margin-right: 8px;
+  }
+  span {
+    flex-shrink: 0;
+  }
+  &.-facebook {
+    color: $--m-color-text-light;
+    background-color: $color-facebook;
+  }
+}

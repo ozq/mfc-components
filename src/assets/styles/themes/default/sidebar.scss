@@ -46,15 +46,19 @@
   &_header {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     padding-left: $--m-sidebar-header-padding-x;
     border-bottom: solid 1px $--m-sidebar-color-border;
     height: $--m-header-height;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
   &_body {
+    height: 100%;
     max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     padding: $--m-sidebar-body-padding-y $--m-sidebar-body-padding-x;
     &::-webkit-scrollbar {
       height: $--m-sidebar-scroll-width;

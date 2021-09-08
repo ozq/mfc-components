@@ -2,7 +2,7 @@
     <div class="m-sidebar-expanded" :style="rootStyles">
         <div class="m-sidebar-expanded_header">
             <slot name="expanded-header"></slot>
-            <m-sidebar-button class="m-sidebar-expanded_toggler" :border-side="false" @click.native="$emit('toggle')">
+            <m-sidebar-button v-if="enableToggle" class="m-sidebar-expanded_toggler" :border-side="false" @click.native="$emit('toggle')">
                 <m-icon name="arrow-right" class="m-sidebar-expanded_icon"/>
             </m-sidebar-button>
         </div>
@@ -19,5 +19,11 @@
         mixins: [
             SidebarMixin,
         ],
+        props: {
+            enableToggle: {
+                type: Boolean,
+                default: true,
+            },
+        },
     };
 </script>

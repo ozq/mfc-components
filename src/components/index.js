@@ -12,6 +12,9 @@ import MToggler from './toggler';
 import MDotsLoader from './dots-loader';
 import MPopoverList from './popover-list';
 import MPopoverListItem from './popover-list-item';
+import MLocaleSelector from './locale-selector';
+import MAuthSocialButton from './auth-social-button';
+import MTelInput from './tel-input';
 
 export {
     MIcon,
@@ -28,4 +31,7 @@ export {
     MDotsLoader,
     MPopoverList,
     MPopoverListItem,
+    MLocaleSelector,
+    MAuthSocialButton,
+    MTelInput,
 };

@@ -23,6 +23,10 @@
   }
   &_popover {
     margin-left: $--m-userpic-icon-gap;
+    & > *:first-child {
+      display: flex !important;
+      align-items: center;
+    }
   }
   &_caret {
     cursor: pointer;
@@ -31,6 +35,7 @@
     width: $--m-userpic-icon-size;
     height: $--m-userpic-icon-size;
     transition: opacity 0.2s;
+    margin-left: 8px;
     &:hover {
       opacity: 1;
     }

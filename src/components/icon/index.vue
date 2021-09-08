@@ -1,5 +1,5 @@
 <template>
-    <component class="m-icon" :is="require(`@/assets/images/icons/${name}.svg`)"/>
+    <component class="m-icon" :is="require(`@/assets/images/icons/${name}.svg?inline`)"/>
 </template>
 
 <script>

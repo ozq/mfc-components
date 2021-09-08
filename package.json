@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name mui ./src/components/index.js",
+    "build": "vue-cli-service build --target lib --name mui ./src/components/plugin.js",
     "lint": "vue-cli-service lint",
     "postversion": "npm run release",
     "release": "npm publish"
@@ -23,10 +23,13 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.3",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
     "v-tooltip": "^2.0.3",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.25.0",
+    "vue-tel-input": "^5.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -35,6 +38,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "file-loader": "^6.2.0",
+    "svg-url-loader": "^7.1.1",
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11"
   },

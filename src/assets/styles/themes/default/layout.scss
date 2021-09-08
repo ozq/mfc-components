@@ -11,7 +11,8 @@
     flex-direction: column;
     width: 100%;
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+    @include alternative-scroll();
   }
   &_body {
     flex-grow: 1;
