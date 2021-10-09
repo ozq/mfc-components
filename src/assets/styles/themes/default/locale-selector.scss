@@ -7,6 +7,9 @@
   align-items: center;
   line-height: 1;
   cursor: pointer;
+  svg {
+    margin-right: $--m-popover-list-item-icon-gap;
+  }
 }
 
 @include component(locale-reference) {

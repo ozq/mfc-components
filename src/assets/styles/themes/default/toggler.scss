@@ -73,4 +73,31 @@
       }
     }
   }
+  &.-success {
+    input {
+      &:checked {
+        & + label:before {
+          background: $--m-color-success;
+        }
+      }
+    }
+  }
+  &.-warning {
+    input {
+      &:checked {
+        & + label:before {
+          background: $--m-color-warning;
+        }
+      }
+    }
+  }
+  &.-danger {
+    input {
+      &:checked {
+        & + label:before {
+          background: $--m-color-danger;
+        }
+      }
+    }
+  }
 };

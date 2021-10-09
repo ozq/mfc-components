@@ -1,3 +1,6 @@
+// import MPopover from './popover';
+// import MPopoverList from './popover-list';
+// import MPopoverListItem from './popover-list-item';
 import MIcon from './icon';
 import MSidebar from './sidebar';
 import MSidebarButton from './sidebar-button';
@@ -6,17 +9,17 @@ import MLayout from './layout';
 import MMenu from './menu';
 import MMenuItem from './menu-item';
 import MUserpic from './userpic';
-import MPopover from './popover';
+import MLocaleSelector from './locale-selector';
 import MIndicator from './indicator';
 import MToggler from './toggler';
 import MDotsLoader from './dots-loader';
-import MPopoverList from './popover-list';
-import MPopoverListItem from './popover-list-item';
-import MLocaleSelector from './locale-selector';
 import MAuthSocialButton from './auth-social-button';
 import MTelInput from './tel-input';
 
 export {
+    //MPopover,
+    //MPopoverList,
+    //MPopoverListItem,
     MIcon,
     MSidebar,
     MSidebarButton,
@@ -25,13 +28,10 @@ export {
     MMenu,
     MMenuItem,
     MUserpic,
-    MPopover,
+    MLocaleSelector,
     MIndicator,
     MToggler,
     MDotsLoader,
-    MPopoverList,
-    MPopoverListItem,
-    MLocaleSelector,
     MAuthSocialButton,
     MTelInput,
 };

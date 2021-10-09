@@ -1,18 +1,22 @@
 <template>
     <div class="m-userpic" :style="wrapperStyle" @click="$emit('click')">
-        <m-popover class="m-userpic_popover" placement="bottom" :trigger="trigger">
-            <template slot="reference">
-                <div class="m-userpic_image" :style="picStyle">{{ (title || '')[0] }}</div>
-                <m-icon v-if="$slots.popover" class="m-userpic_caret" name="dropdown-arrow"/>
-            </template>
-            <slot name="popover"></slot>
-        </m-popover>
+        <el-popover class="m-userpic_popover" placement="bottom" trigger="click">
+            <div slot="reference">
+                <div class="m-userpic_reference">
+                    <div class="m-userpic_image" :style="picStyle">{{ (title || '')[0] }}</div>
+                    <m-icon v-if="$slots.default" class="m-userpic_caret" name="dropdown-arrow"/>
+                </div>
+            </div>
+            <slot></slot>
+        </el-popover>
     </div>
 </template>
 
 <script>
     import MIcon from '../icon';
-    import MPopover from '../popover';
+    import {
+        Popover,
+    } from 'element-ui';
 
     export default {
         props: {
@@ -31,7 +35,7 @@
         },
         components: {
             MIcon,
-            MPopover,
+            Popover,
         },
         computed: {
             picStyle() {

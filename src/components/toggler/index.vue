@@ -1,5 +1,5 @@
 <template>
-    <div class="m-toggler" :class="{ '-disabled': disabled }" @click.stop="() => {}">
+    <div class="m-toggler" :class="{ '-disabled': disabled, [`-${type}`]: Boolean(type) }" @click.stop="() => {}">
         <input type="checkbox" :id="`${id}`" v-model="checked" :disabled="disabled">
         <label :for="`${id}`"></label>
         <span class="m-toggler_label" v-if="label">{{ label }}</span>
@@ -20,6 +20,10 @@
                 type: Boolean,
                 default: false,
             },
+            type: {
+                type: String,
+                default: '',
+            },
         },
         data() {
             return {
@@ -32,6 +36,7 @@
                 this.$emit('input', value);
             },
             value: {
+                immediate: false,
                 handler() {
                     this.checked = this.value;
                 },

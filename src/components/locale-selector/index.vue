@@ -1,21 +1,26 @@
 <template>
-    <m-popover class="m-locale-selector" placement="bottom" :open="isOpened" @show="isOpened = true" @hide="isOpened = false">
-        <m-popover-list>
-            <m-popover-list-item v-for="locale in localeItems" :key="locale.code" @click="handleSelect(locale.code)">
-                <a class="m-locale-item"><m-icon :name="`locale_${locale.code}`"/>&nbsp;{{ locale.label }}</a>
-            </m-popover-list-item>
-        </m-popover-list>
-        <span slot="reference" class="m-locale-item m-locale-reference" :class="{ ['-opened']: isOpened }">
+    <el-dropdown class="m-locale-selector" placement="bottom" @command="handleSelect">
+        <span class="m-locale-item m-locale-reference">
             <m-icon :name="`locale_${locale}`"/>&nbsp;<span>{{ localesMap[locale] }}</span>
         </span>
-    </m-popover>
+        <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item v-for="locale in localeItems"
+                :key="locale.code"
+                :command="locale.code"
+                class="m-locale-item">
+               <m-icon :name="`locale_${locale.code}`"/>&nbsp;{{ locale.label }}
+            </el-dropdown-item>
+        </el-dropdown-menu>
+    </el-dropdown>
 </template>
 
 <script>
     import MIcon from '../icon';
-    import MPopover from '../popover';
-    import MPopoverList from '../popover-list';
-    import MPopoverListItem from '../popover-list-item';
+    import {
+        Dropdown,
+        DropdownMenu,
+        DropdownItem,
+    } from 'element-ui';
 
     const DEFAULT_LOCALE = 'ru';
 
@@ -32,13 +37,12 @@
         },
         components: {
             MIcon,
-            MPopover,
-            MPopoverList,
-            MPopoverListItem,
+            Dropdown,
+            DropdownItem,
+            DropdownMenu,
         },
         data() {
             return {
-                isOpened: false,
                 localesMap: {
                     en: 'English',
                     ru: 'Русский',
@@ -55,7 +59,6 @@
         },
         methods: {
             handleSelect(code) {
-                this.isOpened = false;
                 this.$emit('select', code);
             },
         },

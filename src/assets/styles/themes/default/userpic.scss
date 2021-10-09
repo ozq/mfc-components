@@ -23,10 +23,10 @@
   }
   &_popover {
     margin-left: $--m-userpic-icon-gap;
-    & > *:first-child {
-      display: flex !important;
-      align-items: center;
-    }
+  }
+  &_reference {
+    display: flex;
+    align-items: center;
   }
   &_caret {
     cursor: pointer;
