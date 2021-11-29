@@ -11,6 +11,7 @@ import MMenuItem from './menu-item';
 import MUserpic from './userpic';
 import MLocaleSelector from './locale-selector';
 import MIndicator from './indicator';
+import MIndicatorTag from './indicator-tag';
 import MToggler from './toggler';
 import MDotsLoader from './dots-loader';
 import MAuthSocialButton from './auth-social-button';
@@ -30,6 +31,7 @@ export {
     MUserpic,
     MLocaleSelector,
     MIndicator,
+    MIndicatorTag,
     MToggler,
     MDotsLoader,
     MAuthSocialButton,

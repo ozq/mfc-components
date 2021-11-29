@@ -25,7 +25,7 @@ $indicatorColors: (
   }
 }
 
-@mixin square($size) {
+@mixin  square($size) {
   width: $size;
   height: $size;
   flex-shrink: 0;

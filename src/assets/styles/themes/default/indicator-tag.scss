@@ -1,0 +1,16 @@
+@import "../../config";
+@import "../../mixins";
+
+@include component(indicator-tag) {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 16px;
+  padding: 0 8px;
+  color: $--m-color-text-light;
+  &.-xs { height: 16px; font-size: 10px; }
+  &, &.-sm { height: 20px; font-size: 12px; }
+  &.-md { height: 24px; font-size: 16px; }
+  &.-lg { height: 32px; font-size: 18px; }
+  @include indicator('background-color');
+};

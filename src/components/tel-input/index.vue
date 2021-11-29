@@ -1,10 +1,10 @@
 <template>
     <vue-tel-input class="m-tel-input"
-        v-model="formattedNumber"
+        :value="value"
         :placeholder="placeholder"
         :dynamic-placeholder="true"
-        @onBlur="onBlur"
-        @onInput="onInput"/>
+        @blur="onBlur"
+        @input="onInput"/>
 </template>
 
 <script>
@@ -24,7 +24,6 @@
         data() {
             return {
                 valid: true,
-                formattedNumber: this.value,
             };
         },
         components: {
@@ -34,13 +33,14 @@
             emitValidateEvent(valid) {
                 this.$emit('validate', { valid: valid, error: valid ? '' : this.$t('validation.phoneFormat') });
             },
-            onInput({ number, isValid }) {
-                this.$emit('input', number.e164 || number.input);
-                if (number.input && number.input.length > 0) {
-                    if (this.valid === false && isValid === true) {
-                        this.emitValidateEvent(isValid);
+            onInput(formattedNumber, numberObject) {
+                this.$emit('input', number);
+                const { valid, number } = numberObject;
+                if (number && number.input && number.input.length > 0) {
+                    if (this.valid === false && valid === true) {
+                        this.emitValidateEvent(valid);
                     }
-                    this.valid = isValid;
+                    this.valid = valid;
                 }
             },
             onBlur() {
